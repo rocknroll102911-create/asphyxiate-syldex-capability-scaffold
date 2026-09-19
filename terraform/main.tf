@@ -1,0 +1,1 @@
+provider "aws" { region = "us-east-1" } resource "aws_instance" "threat_filter" { ami = "ami-12345678" instance_type = "t3.medium" }
