@@ -1,0 +1,1 @@
+import { z } from 'zod'; export class BuilderCore { static schema = z.object({ name: z.string(), industry: z.string() }); generate(input: unknown) { const data = BuilderCore.schema.parse(input); return { files: [{ path: 'README.md', content: `# ${data.name}`, purpose: 'docs' }], buildOrder: ['node-01', 'node-02', 'node-03', 'node-04'] }; } }
